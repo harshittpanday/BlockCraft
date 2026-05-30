@@ -4,6 +4,9 @@ BlockCraft is a browser-based voxel sandbox game inspired by Minecraft and built
 
 The project is focused on learning game development, 3D graphics, world generation, and voxel engine mechanics from scratch.
 
+## Live at
+- https://harshittpanday.github.io/BlockCraft/
+
 ## ✨ Features
 
 - 🎮 First-person camera controls
