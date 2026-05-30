@@ -24,3 +24,31 @@ canvas {
   background: white;
   border-radius: 50%;
 }
+#hotbar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 10px;
+}
+
+.slot {
+  width: 60px;
+  height: 60px;
+
+  border: 3px solid white;
+  background: rgba(0,0,0,0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 30px;
+}
+
+.selected {
+  transform: scale(1.15);
+  border-color: gold;
+}
