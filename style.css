@@ -1,0 +1,26 @@
+/* ================= RESET ================= */
+body {
+  margin: 0;
+  overflow: hidden;
+  background: black;
+}
+
+/* ================= GAME CANVAS ================= */
+canvas {
+  display: block;
+}
+
+/* ================= CROSSHAIR ================= */
+#crosshair {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 999;
+
+  background: white;
+  border-radius: 50%;
+}
