@@ -1,6 +1,6 @@
-# 🧱 SafePlay
+# 🧱 BlockCraft
 
-SafePlay is a browser-based voxel sandbox game inspired by Minecraft and built with Three.js.
+BlockCraft is a browser-based voxel sandbox game inspired by Minecraft and built with Three.js.
 
 The project is focused on learning game development, 3D graphics, world generation, and voxel engine mechanics from scratch.
 
