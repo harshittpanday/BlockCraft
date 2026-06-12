@@ -22,6 +22,7 @@ A lightweight voxel sandbox game built with **Three.js**, featuring procedural t
 |--------|------------|
 | Move | W A S D |
 | Jump | Space |
+| Sprint | Ctrl |
 | Break block | Left Click |
 | Place block | Right Click |
 | Switch block | 1 / 2 / 3 |
