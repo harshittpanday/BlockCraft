@@ -52,3 +52,56 @@ canvas {
   transform: scale(1.15);
   border-color: gold;
 }
+/* ================= MENU ================= */
+
+#menu {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.35);
+backdrop-filter: blur(4px);
+
+  z-index: 2000;
+}
+
+#menu h1 {
+  font-size: 72px;
+  font-family: monospace;
+
+  color: white;
+
+  text-shadow:
+    4px 4px 0 #000,
+    8px 8px 0 rgba(0,0,0,0.3);
+
+  margin-bottom: 40px;
+}
+
+#menu button {
+  width: 250px;
+
+  padding: 15px;
+
+  font-size: 24px;
+  font-weight: bold;
+
+  border: 4px solid #000;
+
+  background: #bdbdbd;
+
+  cursor: pointer;
+}
+
+#menu button:hover {
+  background: #d8d8d8;
+}
+#version {
+  color: white;
+  opacity: 0.7;
+  margin-bottom: 25px;
+}

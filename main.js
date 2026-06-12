@@ -265,7 +265,11 @@ function animate() {
   camera.rotation.y = rotationY;
   camera.rotation.x = rotationX;
 
-  const speed = 0.08;
+  let speed = 0.08;
+
+if (keys["control"]) {
+  speed = 0.14;
+}
 
   const forward = new THREE.Vector3(
     -Math.sin(rotationY),
@@ -316,3 +320,49 @@ window.addEventListener("resize", () => {
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
+const menu = document.getElementById("menu");
+const playBtn = document.getElementById("playBtn");
+
+playBtn.addEventListener("click", () => {
+
+  menu.style.display = "none";
+
+  canvas.requestPointerLock();
+
+});
+document.getElementById("settingsBtn")
+.addEventListener("click", () => {
+  alert("Coming Soon!");
+});
+
+document.getElementById("creditsBtn")
+.addEventListener("click", () => {
+  alert("Made by Harshit Raj Pandey | ThankYou For Playing");
+});
+
+
+// ================= SAVE WORLD =================
+let worldData = {};
+worldData[`${x}:${y}:${z}`] = blockType;
+saveWorld();
+delete worldData[`${x}:${y}:${z}`];
+saveWorld();
+function saveWorld() {
+  localStorage.setItem("blockcraft_world", JSON.stringify(worldData));
+}
+// ================= LOAD WORLD =================
+function loadWorld() {
+  const data = localStorage.getItem("blockcraft_world");
+  if (data) {
+    worldData = JSON.parse(data);
+
+    for (const key in worldData) {
+      const [x, y, z] = key.split(":").map(Number);
+      const type = worldData[key];
+
+      placeBlock(x, y, z, type); // your existing function
+    }
+  }
+}
+
+loadWorld();
